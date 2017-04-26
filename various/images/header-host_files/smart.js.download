@@ -1,0 +1,9 @@
+(new Image).src = '//ad.doubleclick.net/ddm/activity/src=6143055;type=invmedia;cat=qnmi8gun;u1=page.Hotels.Infosite.Information;u2=HOTEL;u3=-1;u4=;u5=2017-05-13;u6=2017-05-14;u7=Rosemont;u8=1;u9=1818376;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?';
+(new Image).src = '//conv.tubemogul.com/stats/1/conv?cpk=82lyUZHub6WNQ2kvFdvs&cak=xRMjJH6fo5kkdfC7eFKu';
+(new Image).src = '//pix.impdesk.com/pixel?id=8314';
+(new Image).src = '//pix.impdesk.com/pixel?id=8317';
+(new Image).src = '//pix.impdesk.com/pixel?id=8320';
+(new Image).src = '//pix.impdesk.com/pixel?id=8323';
+(new Image).src = '//pix.impdesk.com/pixel?id=8326';
+(new Image).src = '//dmp.cabla.to/prod/9/1818376/start=2017-05-13;end=2017-05-14';
+(function() { var s = document.createElement('iframe'); s.style.height = 0; s.style.width = 0; s.style.border = 'none'; s.style.visibility = 'hidden'; s.src = '//pix.impdesk.com/csync/fire/multi.html?inc=obk,exp'; document.documentElement.appendChild(s); })();

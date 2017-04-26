@@ -1,0 +1,74 @@
+.IM_full_impressions {
+  display: none;
+}
+.IM_meta_wrapper {
+  display: none;
+  margin: 0 0 6px;
+  padding: 11px 11px 8px;
+  font-size: 62.5%;
+  line-height: 1.6em;
+  background-color: #FFF;
+  overflow: auto;
+  border-radius: 0.4em;
+  border-bottom: 1px solid #C7C7C7;
+}
+.IM_impressions dl {
+  margin: 0;
+  padding: 0;
+}
+.IM_impressions dt {
+  font-weight: bold;
+  font-size: 1.6em;
+  color: #00355f;
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+.IM_impressions dd {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  float: left;
+  min-width: 11em;
+  width: 20%;
+  color: #000;
+  margin-bottom: 0.5em;
+}
+.IM_impressions a {
+  color: #0065b8;
+  text-decoration: none;
+}
+.IM_impressions a:hover {
+  text-decoration: underline;
+}
+.IM_hotel_price:after {
+  font-family: "UITKIcons";
+  display: inline-block;
+  position: relative;
+  content: "\e024";
+}
+.IM_first {
+  display: none;
+  font-weight: bold;
+}
+.IM_close_button {
+  float: right;
+  font-size: 1.5em;
+  color: #6B6B6B;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.IM_close_button:hover {
+  color: #000;
+}
+.IM_close_button:after {
+  font-family: "UITKIcons";
+  content: "\e022";
+}
+.IM_close_button .IM_button_text {
+  display: none;
+}
+div.IM_meta_wrapper {
+  display: block;
+}

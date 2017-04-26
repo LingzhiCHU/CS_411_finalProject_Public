@@ -1,0 +1,81 @@
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=620">
+<title>ContentEditable</title>
+<link rel="stylesheet" href="css/html5demos.css">
+<script src="js/h5utils.js"></script></head>
+<body>
+<section id="wrapper">
+<div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/14060/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+    <header>
+      <h1>My Hotel</h1>
+    </header>
+
+<article>
+ 
+  <section id="editable" contenteditable="true">
+    <h2>Go ahead, edit away!</h2>
+    <p>Chicago Hyatt Hotel at O'Hare Airport</p>
+    
+
+   <table border="1" style="width:300px">
+<thead>
+<tr>
+<th>Name of Hotel</th>
+<th>Price</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chicago Hyatt Hotel at O'Hare Airport</td>
+<td>$130</td>
+<td>1309N White Ave, Chicago, IL</td>
+</tr>
+<tr>
+<td>Chicago Redroof Hotel at O'Hare Airport</td>
+<td>$130</td>
+<td>1307N White Ave, Chicago, IL</td>
+</tr>
+<tr>
+<td>Chicago Knight Hotel at O'Hare Airport</td>
+<td>$100</td>
+<td>1379N White Ave, Chicago, IL</td>
+</tr>
+
+
+</table>
+
+  </section>
+  <div class="cta">
+          <button class="btn btn-primary pull-left">
+      <!--Yuki revision-->
+      <a href="blog.html">Save my edit</a>
+            <!--Sign-Up Now-->
+          </button>
+
+        
+       
+      </div>
+</article>
+<script>
+var editable = document.getElementById('editable');
+
+addEvent(editable, 'blur', function () {
+  // lame that we're hooking the blur event
+  localStorage.setItem('contenteditable', this.innerHTML);
+  document.designMode = 'off';
+});
+
+addEvent(editable, 'focus', function () {
+  document.designMode = 'on';
+});
+
+addEvent(document.getElementById('clear'), 'click', function () {
+  localStorage.clear();
+  window.location = window.location; // refresh
+});
+
+if (localStorage.getItem('contenteditable')) {
+  editable.innerHTML = localStorage.getItem('contenteditable');
+}

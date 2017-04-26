@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<form method = "post" action = "add_rate.php">
+<input type = "text" name = "hotel_id" value = <?php echo $_POST['input_id'] ?>
+<h3>Would you recommend this hotel to your friends? 
+	<input type="radio" name="recommend" value="Yes"> Yes
+	<input type="radio" name="recommend" value="No"> No <br>
+
+	Please give this hotel an overall rating (1~5, 1 for terrible, 5 for perfect):
+	<input type = "number" name = "rate" > <br>
+
+	Tell us about your stay: 
+</h3>
+<h4>
+	Summary <br>
+	<textarea name= "comment" rows="2" cols="100"></textarea><br />
+
+	Additional comments
+	<textarea name= "comment" rows="10" cols="100"></textarea><br />
+	<input type = "submit" value = "Submit your review">
+</h4>
+</form>
+</html>

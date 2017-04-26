@@ -1,0 +1,9 @@
+(function(d) {
+  var i = d.createElement('iframe');
+  i.style.width = 0;
+  i.style.height = 0;
+  i.style.border = 'none';
+  i.style.visibility = 'hidden';
+  i.src = '//pix.impdesk.com/csync/fire/multi.html?inc=obk,exp';
+  d.documentElement.appendChild(i);
+})(document)

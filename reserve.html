@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+   <body>
+	
+
+	<form method="post" action = "make_reservation.php">
+ 	<h4>Please enter your email: <input name= "input_email" type="text" /><br />
+ 	Please enter your Password: <input name= "input_password" type="password" /><br />
+ 	<input name= "input_id" type="text" value = <?php echo $_POST['input_id'] ?>/>
+ 	<input name= "input_checkin" type="text" value = <?php echo $_POST['input_checkin'] ?>/>
+ 	<input name= "input_checkout" type="text" value = <?php echo $_POST['input_checkout'] ?>/>
+ 	<input name= "input_room" type="text" value = <?php echo $_POST['input_guestnum'] ?>/>
+ 	
+  <input name = "submit" type="submit" value="Reserve!" /> </h4>
+  </form>
+	
+	<h4>Not a member yet? <a href="login_index.html.html">Sign up now</a> </h4>
+
+<!--     <h3><a href="index.html" class="button">Back to home page</a> </h3>
+    <h3><a href="login_index.html" class="button">Log in or Register</a> </h3> -->
+   </body>
+   
+</html>

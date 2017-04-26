@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title></title>
+ 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css_login/style2.css">
+  <link rel="stylesheet" href="css_login/set1.css">
+
+  <!--Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<div id="main-wrapper">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 left-side">
+        <header>
+          
+          <h3>Add the restaurant you like</h3>
+        </header>
+      </div>
+      <div class="col-md-6 right-side">
+      <form action="restaurant.php" method="post" target="_blank">
+          <span class="input input--hoshi">
+          <input name = "input_name" class="input__field input__field--hoshi" type="text" id="name" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="name">
+            <span class="input__label-content input__label-content--hoshi">name</span>
+          </label>
+        </span>
+        <span class="input input--hoshi">
+          <input name = "input_location" class="input__field input__field--hoshi" type="text" id="name" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="name">
+            <span class="input__label-content input__label-content--hoshi">location</span>
+          </label>
+        </span>
+        
+     
+       
+        <span class="input input--hoshi">
+          <input name = "input_restaurant_type" class="input__field input__field--hoshi" type="text" id="name" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password1">
+            <span class="input__label-content input__label-content--hoshi">restaurant type</span>
+          </label>
+        </span>
+       
+          <span class="input input--hoshi">
+          <input name = "input_food" class="input__field input__field--hoshi" type="text" id="name" />
+          <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password1">
+            <span class="input__label-content input__label-content--hoshi">food recommended</span>
+          </label>
+        </span>
+       
+          <button class="btn btn-primary pull-left">
+          <input name="Search" type="submit" value="Add recommendation" />
+          <input name = "Asearch" type = "submit" value = "Advanced Search" />
+		  <!--Yuki revision-->
+		  <!--<a href="blog.html">Search Now</a>  -->
+            <!--Sign-Up Now-->
+          </button>
+          </form>
+        
+        <ul class="social list-inline">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- end #main-wrapper -->
+
+<!-- Scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js_login/scripts.js"></script>
+<script src="js_login/classie.js"></script>
+<script>
+  (function() {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>
